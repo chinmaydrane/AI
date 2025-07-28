@@ -36,9 +36,10 @@ int make2()
 {
   if (board[4] == 2)
     return 4;
-  for (int i = 1; i <= 7; i += 2)
+  vector<int> corner = {0, 2, 3, 5, 6, 8};
+  for (int i = 0; i < 6; i++)
   {
-    if (board[i] == 2)
+    if (board[corner[i]] == 2)
       return i;
   }
   return -1;
